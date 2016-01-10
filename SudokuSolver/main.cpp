@@ -10,6 +10,7 @@
 #include "cell.hpp"
 #include "Puzzle.hpp"
 #include "BasicAlgorithm.hpp"
+#include "PuzzleParser.hpp"
 #include <vector>
 
 using namespace std;
@@ -17,21 +18,21 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     // insert code here...
 
-    Puzzle puzzle;
-
+    PuzzleParser parser;
+    Puzzle puzzle = parser.textFileParse("puzzleTxtFiles/puzzle01.txt");
     
-    cout << "starting alg on this puzzle";
-    puzzle.printPuzzle();
-    
-    BasicAlgorithm alg;
-    bool solved = alg.solvePuzzleBasicMethod(&puzzle);
-    
-    if(solved) {
-        cout << "Puzzle was solved!\n";
-    } else {
-        cout << "Puzzle was unsolvable\n";
-    }
-    puzzle.printPuzzle();
+//    cout << "starting alg on this puzzle\n";
+//    puzzle.printPuzzle();
+//    
+//    BasicAlgorithm alg;
+//    bool solved = alg.solvePuzzleBasicMethod(&puzzle);
+//    
+//    if(solved) {
+//        cout << "Puzzle was solved!\n";
+//    } else {
+//        cout << "Puzzle was unsolvable\n";
+//    }
+//    puzzle.printPuzzle();
     
 //    std::vector<int> row = puzzle.getRow(5);
 //    

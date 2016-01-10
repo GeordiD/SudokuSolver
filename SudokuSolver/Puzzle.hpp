@@ -18,7 +18,6 @@ typedef std::vector<int> intvec;
 class Puzzle {
 private:
     Cell cells[9][9];
-    void setFixedCell(int,int,int);
     intvec getRow(int);
     intvec getCol(int);
     intvec getBox(int,int);
@@ -26,6 +25,7 @@ private:
 public:
     Puzzle();
     bool isCellOk(int,int);
+    void setFixedCell(int,int,int);
     std::vector<Cell*> getArrUnfixedCellPointers();
     void printPuzzle();
 };
