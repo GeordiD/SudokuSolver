@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D6790BAA1C36E8C700958263 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6790BA91C36E8C700958263 /* main.cpp */; };
+		D6B7DCEE1C373396004D527E /* cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6B7DCEC1C373396004D527E /* cell.cpp */; };
+		D6B7DCF11C376514004D527E /* Puzzle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6B7DCEF1C376514004D527E /* Puzzle.cpp */; };
+		D6B7DCF41C41CE01004D527E /* BasicAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6B7DCF21C41CE01004D527E /* BasicAlgorithm.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,12 @@
 /* Begin PBXFileReference section */
 		D6790BA61C36E8C700958263 /* SudokuSolver */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SudokuSolver; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6790BA91C36E8C700958263 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D6B7DCEC1C373396004D527E /* cell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cell.cpp; sourceTree = "<group>"; };
+		D6B7DCED1C373396004D527E /* cell.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cell.hpp; sourceTree = "<group>"; };
+		D6B7DCEF1C376514004D527E /* Puzzle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Puzzle.cpp; sourceTree = "<group>"; };
+		D6B7DCF01C376514004D527E /* Puzzle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Puzzle.hpp; sourceTree = "<group>"; };
+		D6B7DCF21C41CE01004D527E /* BasicAlgorithm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BasicAlgorithm.cpp; sourceTree = "<group>"; };
+		D6B7DCF31C41CE01004D527E /* BasicAlgorithm.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BasicAlgorithm.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				D6790BA91C36E8C700958263 /* main.cpp */,
+				D6B7DCEC1C373396004D527E /* cell.cpp */,
+				D6B7DCED1C373396004D527E /* cell.hpp */,
+				D6B7DCEF1C376514004D527E /* Puzzle.cpp */,
+				D6B7DCF01C376514004D527E /* Puzzle.hpp */,
+				D6B7DCF21C41CE01004D527E /* BasicAlgorithm.cpp */,
+				D6B7DCF31C41CE01004D527E /* BasicAlgorithm.hpp */,
 			);
 			path = SudokuSolver;
 			sourceTree = "<group>";
@@ -118,7 +133,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B7DCF41C41CE01004D527E /* BasicAlgorithm.cpp in Sources */,
+				D6B7DCF11C376514004D527E /* Puzzle.cpp in Sources */,
 				D6790BAA1C36E8C700958263 /* main.cpp in Sources */,
+				D6B7DCEE1C373396004D527E /* cell.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +255,7 @@
 				D6790BAF1C36E8C700958263 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
