@@ -15,31 +15,47 @@
 
 using namespace std;
 
+void welcome() {
+    cout << "Sudoku Solver by Geordi Dosher (C) 2016" << endl;
+}
+
+string askForPuzzleTypeInput() {
+    cout << "Enter .txt filename from the puzzles folder" << endl;
+    cout << "or type \'text\'to enter a puzzle manually" << endl;
+    string input;
+    cin >> input;
+    
+    if(input == "text") {
+        cout << "Still working on it :( Try again later" << endl;
+        return askForPuzzleTypeInput();
+    } else {
+        return input;
+    }
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
 
+    welcome();
+    string filename = askForPuzzleTypeInput();
+    
     PuzzleParser parser;
-    Puzzle puzzle = parser.textFileParse("puzzleTxtFiles/puzzle01.txt");
+    Puzzle puzzle = parser.textFileParse(filename);
     
-//    cout << "starting alg on this puzzle\n";
-//    puzzle.printPuzzle();
-//    
-//    BasicAlgorithm alg;
-//    bool solved = alg.solvePuzzleBasicMethod(&puzzle);
-//    
-//    if(solved) {
-//        cout << "Puzzle was solved!\n";
-//    } else {
-//        cout << "Puzzle was unsolvable\n";
-//    }
-//    puzzle.printPuzzle();
+    cout << "starting alg on this puzzle\n";
+    puzzle.printPuzzle();
     
-//    std::vector<int> row = puzzle.getRow(5);
-//    
-//    for(int i = 0; i < row.size(); i++) {
-//        cout << row[i];
-//    }
-//    cout << "\n";
+    BasicAlgorithm alg;
+    bool solved = alg.solvePuzzleBasicMethod(&puzzle);
+    
+    if(solved) {
+        cout << "Puzzle was solved!\n";
+    } else {
+        cout << "Puzzle was unsolvable\n";
+    }
+    puzzle.printPuzzle();
     
     return 0;
 }
+
+

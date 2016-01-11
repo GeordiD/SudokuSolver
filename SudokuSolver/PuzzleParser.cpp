@@ -23,7 +23,38 @@ string PuzzleParser::getFileContents(string filename) {
 }
 
 Puzzle PuzzleParser::parseString(string data) {
-    //TODO make parsing logic
-    //data should contain data of file
-    return Puzzle();
+    Puzzle puzzle;
+    std::vector<int> buffer;
+    
+    data.erase(std::remove(data.begin(), data.end(), '\n'), data.end());
+    
+    for(char& c : data) {
+        if(c == '.') {
+            if(buffer.size() == 3) {
+                int x,y,val;
+                
+                val = buffer.back() - '0';
+                buffer.pop_back();
+                y = buffer.back() - '0';
+                buffer.pop_back();
+                x = buffer.back() - '0';
+                buffer.pop_back();
+                buffer.clear();
+                
+                puzzle.setFixedCell(x, y, val);
+            } else {
+                throw std::invalid_argument("Found invalid character in string");
+            }
+        } else if (isdigit(c)) {
+            if(buffer.size() < 3) {
+                buffer.push_back(c);
+            } else {
+                throw std::invalid_argument("Found invalid character in string");
+            }
+        } else {
+            throw std::invalid_argument("Found invalid character in string");
+        }
+    }
+    
+    return puzzle;
 }

@@ -44,11 +44,11 @@ bool BasicAlgorithm::solvePuzzleBasicMethod(Puzzle *puzzle) {
         }
         
         if(!goBack) {
-            std::cout << "Cell(" << curr->getX() << "," << curr->getY() << ") newValue = "
-                    << curr->getValue() << "\n";
+//            std::cout << "Cell(" << curr->getX() << "," << curr->getY() << ") newValue = "
+//                    << curr->getValue() << "\n";
             i++;
         } else {
-            std::cout << "Cell(" << curr->getX() << "," << curr->getY() << ") goBack\n";
+//            std::cout << "Cell(" << curr->getX() << "," << curr->getY() << ") goBack\n";
         }
     }
     
