@@ -23,35 +23,6 @@ Puzzle::Puzzle() {
         }
     }
     
-    setFixedCell(0, 0, 2);
-    setFixedCell(0, 3, 8);
-    setFixedCell(0, 5, 4);
-    setFixedCell(0, 8, 6);
-    setFixedCell(1, 2, 6);
-    setFixedCell(1, 6, 5);
-    setFixedCell(2, 1, 7);
-    setFixedCell(2, 2, 4);
-    setFixedCell(2, 6, 9);
-    setFixedCell(2, 7, 2);
-    setFixedCell(3, 0, 3);
-    setFixedCell(3, 4, 4);
-    setFixedCell(3, 8, 7);
-    setFixedCell(4, 3, 3);
-    setFixedCell(4, 5, 5);
-    setFixedCell(5, 0, 4);
-    setFixedCell(5, 4, 6);
-    setFixedCell(5, 8, 9);
-    setFixedCell(6, 1, 1);
-    setFixedCell(6, 2, 9);
-    setFixedCell(6, 6, 7);
-    setFixedCell(6, 7, 4);
-    setFixedCell(7, 2, 8);
-    setFixedCell(7, 6, 2);
-    setFixedCell(8, 0, 5);
-    setFixedCell(8, 3, 6);
-    setFixedCell(8, 5, 8);
-    setFixedCell(8, 8, 1);
-    
 //    //TESTING:
 //    intvec row = getRow(2);
 //    intvec col = getCol(2);

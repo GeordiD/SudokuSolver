@@ -12,6 +12,7 @@
 #include <fstream>
 
 Puzzle PuzzleParser::textFileParse(string filename) {
+    cout << "filename = " << filename << endl;
     return parseString(getFileContents(filename));
 }
 
