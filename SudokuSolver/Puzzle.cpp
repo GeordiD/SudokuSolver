@@ -36,6 +36,10 @@ Puzzle::Puzzle() {
 
 void Puzzle::setFixedCell(int x, int y, int val) {
     cells[x][y] = Cell(x,y,val,0);
+    if(!isCellOk(x, y)) {
+        //This cell is not valid - throw exception
+        throw std::invalid_argument("Setting this cell as fixed makes puzzle invalid");
+    }
 }
 
 intvec Puzzle::getRow(int n) {

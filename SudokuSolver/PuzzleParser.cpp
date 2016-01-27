@@ -42,7 +42,14 @@ Puzzle PuzzleParser::parseString(string data) {
                 buffer.pop_back();
                 buffer.clear();
                 
-                puzzle.setFixedCell(x, y, val);
+                try {
+                  puzzle.setFixedCell(x, y, val);
+                } catch (std::invalid_argument e) {
+                    std::cout << "Cell at (" << x << "," << y << ") with value " <<
+                            val << " makes puzzle invalid.\n\n";
+                    throw e;
+                }
+
             } else {
                 throw std::invalid_argument("Found invalid character in string");
             }

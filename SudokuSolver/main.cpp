@@ -40,14 +40,12 @@ chrono::milliseconds getTime() {
         (chrono::system_clock::now().time_since_epoch());
 }
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-
-    welcome();
+void programLoop() {
     string filename = askForPuzzleTypeInput();
     
     PuzzleParser parser;
     Puzzle puzzle = parser.textFileParse(filename);
+    
     
     cout << "starting alg on this puzzle\n";
     puzzle.printPuzzle();
@@ -67,6 +65,17 @@ int main(int argc, const char * argv[]) {
         puzzle.printPuzzle();
     } else {
         cout << "Puzzle was unsolvable\n";
+    }
+}
+
+int main(int argc, const char * argv[]) {
+    // insert code here...
+
+    welcome();
+    try {
+        programLoop();
+    } catch (std::exception e) {
+        programLoop();
     }
     
     

@@ -47,7 +47,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/GeordiD/Desktop/SudokuSolver/SudokuSolver/SudokuSolver"
+      customWorkingDirectory = "/Users/GeordiD/MyProjects/Sudoku_Solver/SudokuSolver/puzzleTxtFiles"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
