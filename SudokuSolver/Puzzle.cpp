@@ -139,3 +139,16 @@ void Puzzle::printPuzzle() {
     std::cout<<"=====\n";
 }
 
+std::string Puzzle::getPuzzleOutput() {
+    std::string output = "";
+    for(int x = 0; x < 9; x++) {
+        for (int y = 0; y < 9; y++) {
+            output += std::to_string(x);
+            output += std::to_string(y);
+            output += std::to_string(cells[x][y].getValue());
+            output += ".";
+        }
+    }
+    output += ":\n";
+    return output;
+}

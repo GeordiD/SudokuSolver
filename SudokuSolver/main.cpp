@@ -68,14 +68,33 @@ void programLoop() {
     }
 }
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
+void serverApp(string input) {
+    PuzzleParser parser;
+    Puzzle puzzle = parser.parseString(input);
+    BasicAlgorithm alg;
+    
+    if(alg.solvePuzzleBasicMethod(&puzzle)) {
+        cout << puzzle.getPuzzleOutput();
+        return;
+    } else {
+        cout << "US" << endl;
+    }
+}
 
-    welcome();
+int main(int argc, const char * argv[]) {
+    if(argc > 2) {
+        return 2;
+    }
+    
+    string input = "";
+    if(argc == 2) {
+        input = argv[1];
+    }
+    
     try {
-        programLoop();
+        serverApp(input);
     } catch (std::exception e) {
-        programLoop();
+        return 1;
     }
     
     

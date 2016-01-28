@@ -28,6 +28,7 @@ public:
     void setFixedCell(int,int,int);
     std::vector<Cell*> getArrUnfixedCellPointers();
     void printPuzzle();
+    std::string getPuzzleOutput();
 };
 
 #endif /* Puzzle_hpp */

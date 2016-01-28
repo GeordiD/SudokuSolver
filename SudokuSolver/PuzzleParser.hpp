@@ -15,10 +15,10 @@ using namespace std;
 
 class PuzzleParser {
 private:
-    Puzzle parseString(string);
     string getFileContents(string);
 public:
     Puzzle textFileParse(string);
+    Puzzle parseString(string);
 };
 
 #endif /* PuzzleParser_hpp */
